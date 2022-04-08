@@ -1,0 +1,5 @@
+---
+string[] labels
+float64[] confidence
+string audio_filename
+sensor_msgs/CompressedImage detect_image

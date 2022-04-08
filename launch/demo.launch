@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+    <arg name="port" value="9000"/>
+  </include>
+  <node name="webserver" pkg="aws_demokit" type="webserver.py" required="true" output="screen" /> 
+  <node name="scene_rekognition" pkg="aws_demokit" type="scene_rekognition.py" required="true" output="screen" /> 
+  <include file="$(find aws_demokit)/launch/camera.launch" />
+</launch>
