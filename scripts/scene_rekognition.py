@@ -70,7 +70,7 @@ class SceneRekognitionNode(object):
         response.detect_image.header.stamp = rospy.Time.now()
         response.detect_image.format = "jpeg"
         response.detect_image.data = np.array(
-            cv2.imencode('.jpg', image)[1]).tostring()
+            cv2.imencode('.jpg', image)[1]).tobytes()
 
         # 翻訳
         trans_text = ""
